@@ -1,4 +1,17 @@
 tk
 python-docx
 sumy
+
 nltk
+
+Install dependencies with:
+
+pip install sumy nltk python-docx
+
+You also need to download NLTK resources once:
+
+python -m nltk.downloader punkt punkt_tab stopwords
+
+How to Run
+
+python main.py
