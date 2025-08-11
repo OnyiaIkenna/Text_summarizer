@@ -1,33 +1,32 @@
-Text Summarizer (Tkinter + NLTK + Sumy)
-This is a small Python GUI app I built to practice Tkinter and work with text summarization.
+Text Summarizer App
 
-It lets you:
+Just a small Python project I made to practice Tkinter and work with text summarization.
 
-Load a .txt or .docx file
+It's a desktop app where you can load a .txt or .docx file and it will give you a short summary of the content.
 
-Summarize the content into a shorter version
+What it does:
 
-Read the summary right inside the app
+- Lets you load text files or Word docs
+- Summarizes the text into a few sentences
+- Shows the result right inside the app
 
-How It Works
+How I built it:
 
-The GUI is made with Tkinter (Python's built-in UI library).
+I used Tkinter for the interface (just buttons, labels, and text boxes)
 
-I used NLTK (Natural Language Toolkit) for:
+I used NLTK to:
 
-Breaking text into sentences (punkt tokenizer)
+Split text into sentences (tokenizer)
 
-Removing common words (stopwords) so they don't affect scoring
+Remove common words (stopwords) so they don't affect the summary
 
-For summarizing, I used Sumy’s LexRank algorithm.
+Sumy library for the main summarizing part (LexRank algorithm).
 
-If Sumy fails (e.g., missing resources or parsing issues), the app falls back to a simple frequency-based summarizer I coded.
+If Sumy fails for any reason, I made a quick fallback summarizer using word frequency
 
 Why NLTK?
-NLTK is a Python library for natural language processing. In this project, I use it because:
+Because without it the app wouldn’t know how to break text into proper sentences or ignore filler words.
+Basically, it helps the summarizer focus on important stuff instead of random words like "and", "the", "is" type of words.
 
-The summarizer needs to tokenize text (split it into sentences and words).
+pip install -r requirements.txt
 
-I also need to remove stopwords (common words like "the", "and", "is") so the summary focuses on important words.
-
-It's lightweight and works well with Sumy.
