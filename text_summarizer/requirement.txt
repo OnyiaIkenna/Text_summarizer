@@ -1,0 +1,4 @@
+tk
+python-docx
+sumy
+nltk
